@@ -36,7 +36,7 @@ const Rings = () => {
 };
 
 interface BackgroundCirclesProps {
-  parallaxRef: RefObject<HTMLDivElement>;
+  parallaxRef?: RefObject<HTMLDivElement>;
 }
 
 export const BackgroundCircles: React.FC<BackgroundCirclesProps> = ({ parallaxRef }) => {

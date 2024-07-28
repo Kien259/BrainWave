@@ -6,7 +6,7 @@ interface SectionProps {
   id?: string;
   crosess?: boolean;
   crossesOffset?: string;
-  customPadding?: string;
+  customPaddings?: boolean;
   children: ReactNode;
 }
 
@@ -15,13 +15,13 @@ const Section: React.FC<SectionProps> = ({
   id,
   crosess,
   crossesOffset,
-  customPadding,
+  customPaddings,
   children,
 }) => {
   return (
     <div
       id={id}
-      className={`relative ${customPadding || "py-10 lg:py-16 xl:py-20"} ${
+      className={`relative ${customPaddings || "py-10 lg:py-16 xl:py-20"} ${
         crosess ? "lg:py-32 xl:py-40" : ""
       } ${className || ""}`}
     >
